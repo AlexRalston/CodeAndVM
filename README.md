@@ -20,7 +20,7 @@ Actividad programada para la primera semana de febrero.
 
 
 4.Crear archivos->setup.cpp
-                  herramienta.cpp
+                  herramienta.cpp.
 
 
 
