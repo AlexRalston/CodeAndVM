@@ -23,8 +23,8 @@ cin >> opcion;
     case 1:
     {
         // Mostrar todas las interfaces de red
-        cout << "Mostrando todas las interfaces de red...\n";
-        system("sudo ifconfig -a");
+        cout << "Mostrando todas las interfaces de red y dirección IP del dispositivo...\n";
+        system("sudo ifconfig -a && ip route get 1 | awk '{print $NF;exit}'");
         break;
     }
     case 2:
