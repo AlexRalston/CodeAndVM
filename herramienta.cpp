@@ -39,11 +39,11 @@ cin >> opcion;
         // Abrir tcpdump
         cout << "Abriendo tcpdump...\n";
         cout << "Elija una opción de filtro:\n";
-        cout << "1. ICMP_PDU\n";
-        cout << "2. ARP_PDU\n";
+        cout << "1. ICMP_PDU\n";//Filtrar las PDUs del protocolo ICMP
+        cout << "2. ARP_PDU\n";//Filtrar las PDUs del protocolo ARP
         cout << "Opción: ";
         int filtro;
-        cin >> filtro;
+        cin >> filtro;//Filtrar por numero entero 1 o 2
         if (filtro == 1)
         {
             system("sudo tcpdump icmp");
@@ -62,21 +62,21 @@ cin >> opcion;
     {
         // Mostrar la versión del kernel y la versión del sistema operativo
         cout << "Mostrando la versión del kernel y el nombre del sistema operativo...\n";
-        system("uname -a && cat /etc/*-release | grep DISTRIB_DESCRIPTION");
+        system("uname -a && cat /etc/*-release | grep DISTRIB_DESCRIPTION"); //grep es un comando que se utiliza para buscar un patrón de texto en el comando cat
         break;
     }
     case 5:
     {
         // Mostrar el nombre del usuario y del host
         cout << "Mostrando el nombre del usuario y del host...\n";
-        system("whoami && hostname");//NOMBRE USUARIO Y HOST
+        system("whoami && hostname");//NOMBRE USUARIO Y NOMBRE DEL HOST
         break;
     }
     case 6:
     {
         // Verificar conectividad con Google
         cout << "Verificando conectividad con Google\n";
-        system("ping -c 5 google.com");//5 trazas ICMP
+        system("ping -c 5 google.com");//5 trazas ICMP(el 5 lleva premio jaja)
         break;
     }
     case 7:
