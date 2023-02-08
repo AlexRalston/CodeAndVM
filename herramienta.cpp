@@ -62,7 +62,7 @@ cin >> opcion;
     {
         // Mostrar la versión del kernel y la versión del sistema operativo
         cout << "Mostrando la versión del kernel y el nombre del sistema operativo...\n";
-        system("uname -a && cat /etc/*-release | grep DISTRIB_DESCRIPTION"); //grep es un comando que se utiliza para buscar un patrón de texto en el comando cat
+        system("uname -a && cat /etc/*-release | grep DISTRIB_DESCRIPTION"); //grep es un comando que se utiliza para buscar un patrón de texto en la salida del comando cat
         break;
     }
     case 5:
@@ -76,7 +76,7 @@ cin >> opcion;
     {
         // Verificar conectividad con Google
         cout << "Verificando conectividad con Google\n";
-        system("ping -c 5 google.com");//5 trazas ICMP(el 5 lleva premio jaja)
+        system("ping -c 5 google.com");//5 paquetes ICMP(el 5 lleva premio jaja)
         break;
     }
     case 7:
