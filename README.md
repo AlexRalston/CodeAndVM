@@ -10,7 +10,7 @@ Actividad programada para la primera semana de febrero.
 
 
                       -Verificar interfaces-> Se debe de poder ver la dirección Ip de la interfaz activa
-                      -Verificar si hat conectividad con google.es
+                      -Verificar si hay conectividad con google.es
                       -Abrir Wireshark
                       -Usar TCPDUMP->ICMP y ARP
                       -Verificar versión del kernel.
