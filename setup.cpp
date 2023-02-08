@@ -13,6 +13,10 @@ int main()
     // Actualizar los paquetes instalados
     cout << "Actualizando los paquetes instalados...\n";
     system("sudo apt-get upgrade");
+    
+    //Instalar net-tools
+    cout <<"Instalando net-tools...\n";
+    system("sudo apt-get install net-tools");
 
     // Instalar Wireshark
     cout << "Instalando Wireshark...\n";
