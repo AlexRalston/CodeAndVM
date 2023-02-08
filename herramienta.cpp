@@ -60,9 +60,9 @@ cin >> opcion;
     }
     case 4:
     {
-        // Mostrar la versión del kernel y el nombre del sistema operativo
+        // Mostrar la versión del kernel y la versión del sistema operativo
         cout << "Mostrando la versión del kernel y el nombre del sistema operativo...\n";
-        system("uname -a && cat /etc/*-release");
+        system("uname -a && cat /etc/*-release | grep DISTRIB_DESCRIPTION");
         break;
     }
     case 5:
@@ -74,7 +74,7 @@ cin >> opcion;
     }
     case 6:
     {
-        // Verificar conectividad con Google y todos sus dominios
+        // Verificar conectividad con Google
         cout << "Verificando conectividad con Google\n";
         system("ping -c 5 google.com");//5 trazas ICMP
         break;
