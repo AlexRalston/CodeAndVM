@@ -9,13 +9,13 @@ int main()
 {
 int opcion;
 cout << "Elija una opción:\n";
-cout << "1. Mostrar todas las interfaces de red\n";
-cout << "2. Abrir Wireshark\n";
-cout << "3. Abrir tcpdump\n";
-cout << "4. Mostrar la versión del kernel y el nombre del sistema operativo\n";
-cout << "5. Mostrar el nombre del usuario y del host\n";
-cout << "6. Verificar conectividad con Google y todos sus dominios\n";
-cout << "7. Salir\n";
+cout << "1. Mostrar todas las interfaces de red.\n";
+cout << "2. Abrir Wireshark.\n";
+cout << "3. Abrir tcpdump.\n";
+cout << "4. Mostrar la versión del kernel y la versión del sistema operativo.\n";
+cout << "5. Mostrar el nombre del usuario y del host.\n";
+cout << "6. Verificar conectividad con Google.\n";
+cout << "7. Salir.\n";
 cout << "Opción: ";
 cin >> opcion;
   switch (opcion)
@@ -24,7 +24,8 @@ cin >> opcion;
     {
         // Muestra todas las interfaces de red y la direccion IP del host
         cout << "Mostrando todas las interfaces de red y dirección IP del dispositivo...\n";
-        system("sudo ifconfig -a && ip route get 1 | awk '{print $NF;exit}'");
+        system("sudo ifconfig -a");
+        system("hostname -I");
         break;
     }
     case 2:
@@ -61,7 +62,7 @@ cin >> opcion;
     case 4:
     {
         // Mostrar la versión del kernel y la versión del sistema operativo
-        cout << "Mostrando la versión del kernel y el nombre del sistema operativo...\n";
+        cout << "Mostrando la versión del kernel y la versión del sistema operativo...\n";
         system("uname -a && cat /etc/*-release | grep DISTRIB_DESCRIPTION"); //grep es un comando que se utiliza para buscar un patrón de texto en la salida del comando cat
         break;
     }
@@ -75,7 +76,7 @@ cin >> opcion;
     case 6:
     {
         // Verificar conectividad con Google
-        cout << "Verificando conectividad con Google\n";
+        cout << "Verificando conectividad con Google...\n";
         system("ping -c 5 google.com");//5 paquetes ICMP(el 5 lleva premio jaja)
         break;
     }
