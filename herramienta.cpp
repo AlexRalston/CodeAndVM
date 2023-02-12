@@ -77,7 +77,7 @@ cin >> opcion;
     {
         // Verificar conectividad con Google
         cout << "Verificando conectividad con Google...\n";
-        system("ping -c 5 google.com");//5 paquetes ICMP(el 5 lleva premio jaja)
+        system("ping -c 5 google.com");//5 paquetes ICMP
         break;
     }
     case 7:
